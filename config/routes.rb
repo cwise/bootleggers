@@ -1,7 +1,15 @@
 Bootleggers::Application.routes.draw do
-  get "statistics/index"
-  get "statistics/scoring"
   get "home/index"
+  
+  resources :statistics, :only => [:index] do
+    collection do
+      get :scoring
+      get :interceptions
+      get :games_played
+      get :touchdowns
+      get :sacks
+    end
+  end
 
   mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
 

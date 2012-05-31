@@ -1,18 +1,1 @@
-<table width='100%' class='table table-striped'>
-  <thead>
-    <tr>
-    <th>Player</th>
-    <th>Games</th>
-    <th>Touchdowns</th>
-    <th>Field Goals</th>
-    <th>2pt Convert</th>
-    <th>1pt Convert</th>
-    <th>Points</th>
-    <th>Interceptions</th>
-    <th>Sacks</th>
-    </tr>
-  </thead>
-  <tbody>
-    <%= render :partial => 'statistic', :collection => @statistics %>
-  </tbody>
-</table>
+<%= render :partial => 'statistics', :locals => {:columns => [:player_name, :games_played, :touchdowns, :field_goals, :converts_1, :converts_2, :points]} %>

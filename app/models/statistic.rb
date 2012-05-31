@@ -44,4 +44,8 @@ class Statistic
   def points
     player_statistics.sum(&:points)
   end  
+  
+  def player_name
+    player.full_name
+  end
 end

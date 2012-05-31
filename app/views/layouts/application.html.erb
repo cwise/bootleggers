@@ -31,7 +31,7 @@
           <a class="brand" href="#">Bootleggers</a>
           <div class="container nav-collapse">
             <ul class="nav">
-              <li><%= link_to "Link1", "/path1"  %></li>
+              <li><%= link_to "Scoring", scoring_statistics_path %></li>
               <li><%= link_to "Link2", "/path2"  %></li>
               <li><%= link_to "Link3", "/path3"  %></li>
             </ul>
@@ -51,9 +51,11 @@
                 <h3>Statistics</h3>
                 <ul class="nav nav-list">
                   <li class="nav-header">All-time</li>
-                  <li><%= link_to "Link1", "/path1"  %></li>
-                  <li><%= link_to "Link2", "/path2"  %></li>
-                  <li><%= link_to "Link3", "/path3"  %></li>
+                  <li><%= link_to "Scoring", scoring_statistics_path  %></li>
+                  <li><%= link_to "Touchdowns", touchdowns_statistics_path  %></li>
+                  <li><%= link_to "Interceptions", interceptions_statistics_path  %></li>
+                  <li><%= link_to "Sacks", sacks_statistics_path  %></li>
+                  <li><%= link_to "Games Played", games_played_statistics_path  %></li>                  
                 </ul>
               </div><!--/.well -->
             </div><!--/span-->
