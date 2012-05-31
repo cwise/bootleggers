@@ -11,6 +11,15 @@ Bootleggers::Application.routes.draw do
     end
   end
 
+  resources :records, :only => [:index] do
+    collection do
+      get :scoring
+      get :interceptions
+      get :touchdowns
+      get :sacks
+    end
+  end
+
   mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
 
   devise_for :users

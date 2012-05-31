@@ -28,14 +28,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </a>
-          <a class="brand" href="#">Bootleggers</a>
-          <div class="container nav-collapse">
-            <ul class="nav">
-              <li><%= link_to "Scoring", scoring_statistics_path %></li>
-              <li><%= link_to "Link2", "/path2"  %></li>
-              <li><%= link_to "Link3", "/path3"  %></li>
-            </ul>
-          </div><!--/.nav-collapse -->
+          <%= link_to 'Bootleggers', root_path, :class => 'brand' %>
         </div>
       </div>
     </div>
@@ -51,11 +44,19 @@
                 <h3>Statistics</h3>
                 <ul class="nav nav-list">
                   <li class="nav-header">All-time</li>
-                  <li><%= link_to "Scoring", scoring_statistics_path  %></li>
+                  <li><%= link_to "Scoring", scoring_statistics_path %></li>
                   <li><%= link_to "Touchdowns", touchdowns_statistics_path  %></li>
                   <li><%= link_to "Interceptions", interceptions_statistics_path  %></li>
                   <li><%= link_to "Sacks", sacks_statistics_path  %></li>
                   <li><%= link_to "Games Played", games_played_statistics_path  %></li>                  
+                </ul>
+                <hr />
+                <ul class="nav nav-list">
+                  <li class="nav-header">Record Seasons</li>
+                  <li><%= link_to "Scoring", scoring_records_path %></li>
+                  <li><%= link_to "Touchdowns", touchdowns_records_path  %></li>
+                  <li><%= link_to "Interceptions", interceptions_records_path  %></li>
+                  <li><%= link_to "Sacks", sacks_records_path  %></li>         
                 </ul>
               </div><!--/.well -->
             </div><!--/span-->

@@ -1,0 +1,5 @@
+<tr>
+  <% columns.each do |column| %>
+    <%= content_tag :td, record.send(column) %>
+  <% end %>  
+</tr>

@@ -1,0 +1,12 @@
+<table width='100%' class='table table-striped'>
+  <thead>
+    <tr>
+      <% columns.each do |column| %>
+        <%= content_tag :th, column.to_s.gsub('_', ' ').split(' ').map{|s| s.capitalize}.join(' ') %>
+      <% end %>
+    </tr>
+  </thead>
+  <tbody>
+    <%= render :partial => 'record', :collection => @records, :locals => {:columns => columns} %>
+  </tbody>
+</table>

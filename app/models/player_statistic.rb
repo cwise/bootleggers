@@ -8,4 +8,12 @@ class PlayerStatistic < ActiveRecord::Base
   def points
     touchdowns * 6 + converts_2 * 2 + converts_1 + field_goals * 3
   end
+  
+  def season_name
+    season.title
+  end
+  
+  def player_name
+    player.full_name
+  end  
 end
