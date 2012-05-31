@@ -1,0 +1,17 @@
+development:
+  adapter: postgresql
+  encoding: utf-8
+  database: bootleggers_dev
+  pool: 5
+
+test:
+  adapter: postgresql
+  encoding: utf-8
+  database: bootleggers_test
+  pool: 5
+
+production:
+  adapter: postgresql
+  encoding: utf-8
+  database: bootleggers_prod
+  pool: 5
