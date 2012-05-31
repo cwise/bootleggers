@@ -1,0 +1,17 @@
+<table width='100%' class='table-striped'>
+  <thead>
+    <tr>
+    <th>Player</th>
+    <th>Touchdowns</th>
+    <th>Field Goals</th>
+    <th>2pt Convert</th>
+    <th>1pt Convert</th>
+    <th>Points</th>
+    <th>Interceptions</th>
+    <th>Sacks</th>
+    </tr>
+  </thead>
+  <tbody>
+    <%= render :partial => 'scoring', :collection => @statistics %>
+  </tbody>
+</table>
