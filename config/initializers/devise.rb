@@ -9,9 +9,6 @@ Devise.setup do |config|
   # Configure the class responsible to send e-mails.
   # config.mailer = "Devise::Mailer"
 
-  # Automatically apply schema changes in tableless databases
-  config.apply_schema = false
-
   # ==> ORM configuration
   # Load and configure the ORM. Supports :active_record (default) and
   # :mongoid (bson_ext recommended) by default. Other ORMs may be
@@ -111,10 +108,6 @@ Devise.setup do |config|
   # If true, extends the user's remember period when remembered via cookie.
   # config.extend_remember_period = false
 
-  # If true, uses the password salt as remember token. This should be turned
-  # to false if you are not using database authenticatable.
-  config.use_salt_as_remember_token = true
-
   # Options to be passed to the created cookie. For instance, you can set
   # :secure => true in order to force SSL only cookies.
   # config.cookie_options = {}
@@ -122,7 +115,9 @@ Devise.setup do |config|
   # ==> Configuration for :validatable
   # Range for password length. Default is 6..128.
   # config.password_length = 6..128
-
+  
+  config.secret_key = 'd11a9553dfb4b562a1ae25db4f0f088e0447673be52a0c2f017018ef64c07f7dcd00c764052f1061639ce9a36a4297d02431544792d13953b2c70f0b2e1303b9'
+  
   # Email regex used to validate email formats. It simply asserts that
   # an one (and only one) @ exists in the given string. This is mainly
   # to give user feedback and not to assert the e-mail validity.
