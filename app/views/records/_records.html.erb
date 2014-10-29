@@ -1,8 +1,8 @@
 <table width='100%' class='table table-striped'>
   <thead>
     <tr>
-      <% columns.each do |column| %>
-        <%= content_tag :th, column.to_s.gsub('_', ' ').split(' ').map{|s| s.capitalize}.join(' ') %>
+      <% columns.each_with_index do |column, index| %>
+        <%= content_tag :th, column.to_s.gsub('_', ' ').split(' ').map{|s| s.capitalize}.join(' '), style: "#{(index < 2) ? '' : 'text-align:right'}"  %>
       <% end %>
     </tr>
   </thead>

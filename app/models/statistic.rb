@@ -5,7 +5,8 @@ class Statistic
 	attr_accessor :player
 	attr_accessor :player_statistics
 	attr_accessible :player, :player_statistics
-	
+	attr_accessor :rank
+  
 	def initialize(attributes={})
     unless attributes.empty?
       @player=attributes[:player] if attributes.has_key?(:player)
@@ -46,6 +47,8 @@ class Statistic
   end  
   
   def player_name
-    player.full_name
+    full_name = player.full_name
+    full_name = "x-<em>#{full_name}</em>".html_safe if player.retired?
+    full_name
   end
 end

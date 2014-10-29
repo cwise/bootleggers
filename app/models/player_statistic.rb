@@ -14,6 +14,8 @@ class PlayerStatistic < ActiveRecord::Base
   end
   
   def player_name
-    player.full_name
+    full_name = player.full_name
+    full_name = "x-<em>#{full_name}</em>".html_safe if player.retired?
+    full_name
   end  
 end

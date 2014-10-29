@@ -1,5 +1,5 @@
 <tr>
-  <% columns.each do |column| %>
-    <%= content_tag :td, statistic.send(column) %>
+  <% columns.each_with_index do |column, index| %>
+    <%= content_tag :td, statistic.send(column), style: "#{index < 2 ? '' : 'text-align:right'}"  %>
   <% end %>  
 </tr>
